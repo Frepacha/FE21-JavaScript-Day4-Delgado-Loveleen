@@ -33,3 +33,93 @@ if (temperature_1 < 10) {
 } else {
     document.getElementById("temp3").innerHTML += "The weather is hot " + temperature_1;
 }
+
+/* Intermediate
+Exercise 1 | Compare two numbers
+
+
+Create a JavaScript program that will show the average grade for each student. Here are the points for each student:
+
+Martin = 76
+
+Thomas = 85
+
+Klaus = 65
+
+Maria = 93
+
+David = 81
+
+Based on their points, output the grade, according to the following table:
+
+< 60 F
+
+< 70 D
+
+< 80 C
+
+< 90 B
+
+< 100 A
+
+Finally, calculate the class average and output it (e.g. if the class average is 74 points, their average grade will be C).*/
+
+/* var students = [
+    ['David', 80],
+    ['Vinoth', 77],
+    ['Divya', 88],
+    ['Ishitha', 95],
+    ['Thomas', 68]
+];
+
+var Avgmarks = 0;
+
+for (var i = 0; i < students.length; i++) {
+    Avgmarks += students[i][1];
+    var avg = (Avgmarks / students.length);
+}
+
+console.log("Average grade: " + (Avgmarks) / students.length);
+
+if (avg < 60) {
+    console.log("Grade : F");
+} else if (avg < 70) {
+    console.log("Grade : D");
+} else if (avg < 80) {
+    console.log("Grade : C");
+} else if (avg < 90) {
+    console.log("Grade : B");
+} else if (avg < 100) {
+    console.log("Grade : A");
+} */
+
+var student = [
+    ["Martin", 76],
+    ["Thomas", 85],
+    ["Klaus", 65],
+    ["Maria", 93],
+    ["David", 81]
+];
+var avg_grade = 0;
+
+for (var i = 0; i < student.length; i++) {
+    avg_grade += student[i];
+
+
+}
+
+
+
+if (avg_grade < 60) {
+    document.getElementsByClassName("name")[i].innerHTML += "The student: " + student + "gets the grade F ";
+} else if (avg_grade < 70) {
+    document.getElementsByClassName("name")[0][1].innerHTML += "The student: " + student + "gets the grade D ";
+
+} else if (avg_grade < 80) {
+    document.getElementsByClassName("name")[0][2].innerHTML += "The student: " + student + "gets the grade C ";
+
+} else if (avg_grade < 90) {
+    document.getElementsByClassName("name")[0][3].innerHTML += "The student: " + student + "gets the grade B ";
+} else if (avg_grade < 100) {
+    document.getElementsByClassName("name")[0][4].innerHTML += "The student: " + student + "gets the grade A ";
+}
