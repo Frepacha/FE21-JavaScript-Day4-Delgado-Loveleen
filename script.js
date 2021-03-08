@@ -92,8 +92,8 @@ if (avg < 60) {
 } else if (avg < 100) {
     console.log("Grade : A");
 } */
-
-var student = [
+//Try 1
+/* var student = [
     ["Martin", 76],
     ["Thomas", 85],
     ["Klaus", 65],
@@ -121,5 +121,48 @@ if (avg_grade < 60) {
 } else if (avg_grade < 90) {
     document.getElementsByClassName("name")[0][3].innerHTML += "The student: " + student + "gets the grade B ";
 } else if (avg_grade < 100) {
-    document.getElementsByClassName("name")[0][4].innerHTML += "The student: " + student + "gets the grade A ";
+    document.getElementsByClassName("name")[0][4].innerHTML += "The student: " + student + "gets the grade A "; */
+
+//try 2
+
+let classList = [{
+        name: 'Martin',
+        points: 76
+    },
+    {
+        name: 'Thomas',
+        points: 85
+    },
+    {
+        name: 'Klaus',
+        points: 65
+    },
+    {
+        name: 'Maria',
+        points: 93
+    },
+    {
+        name: 'David',
+        points: 81
+    }
+]
+
+let getGrade = (points) => {
+    let grade = ''
+    if (points <= 100 && points > 90) {
+        grade = 'A';
+    } else if (points <= 90 && points > 80) {
+        grade = 'B';
+    } else if (points <= 80 && points > 70) {
+        grade = 'C';
+    } else if (points <= 70 && points > 60) {
+        grade = 'D'
+    } else {
+        grade = 'F'
+    }
+    return grade
 }
+
+classList.forEach(student => {
+    console.log("Student Name: " + student.name + ", Grade: " + getGrade(student.points))
+})
