@@ -21,3 +21,15 @@ let array = [1, 7, -3, 9];
 document.getElementById("max").innerHTML = "The Highest number is: " + (Math.max(...array));
 
 /* Now when you have program Temperature v1.0 done it time to upgrade it to the version 2.0. Now you should create a nice looking responsive front-end for your program (mobile friendly) and create more messages (e.g. if the temperature is above 32c output "The weather is hot" etc.) and you should display a proper image for the current weather condition. */
+
+let max_1 = 40;
+let min_1 = -5;
+let temperature_1 = (Math.random() * (max_1 - min_1) + min_1).toFixed(4); // + min mean we work with negative numbers
+
+if (temperature_1 < 10) {
+    document.getElementById("temp1").innerHTML += "The weather is cold " + temperature_1;
+} else if (temperature_1 > 10 && temperature_1 < 32) {
+    document.getElementById("temp2").innerHTML += "The weather is moderate " + temperature_1;
+} else {
+    document.getElementById("temp3").innerHTML += "The weather is hot " + temperature_1;
+}
